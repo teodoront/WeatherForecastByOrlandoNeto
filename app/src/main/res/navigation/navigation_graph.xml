@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/searchCityFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_search_city"
+        android:id="@+id/searchCityFragment"
+        android:name="br.com.orlando.weatherforecast.ui.SearchCityFragment"
+        android:label="SearchCityFragment" >
+        <action
+            android:id="@+id/action_searchCityFragment_to_searchResult"
+            app:destination="@id/searchResult" />
+
+
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_search_result"
+        android:id="@+id/searchResult"
+        android:name="br.com.orlando.weatherforecast.ui.SearchResult"
+        android:label="SearchResult" />
+</navigation>
