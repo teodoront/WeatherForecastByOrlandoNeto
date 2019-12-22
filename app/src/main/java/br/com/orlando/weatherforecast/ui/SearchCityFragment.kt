@@ -7,13 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.findNavController
 import br.com.orlando.weatherforecast.R
 import br.com.orlando.weatherforecast.repository.AppRepository
 import kotlinx.android.synthetic.main.fragment_search_city.*
 import kotlinx.android.synthetic.main.fragment_search_city.view.*
-import kotlinx.android.synthetic.main.fragment_search_result.*
-import org.jetbrains.anko.sdk27.coroutines.onClick
 
 class SearchCityFragment : Fragment() {
 
@@ -39,6 +36,12 @@ class SearchCityFragment : Fragment() {
         prevResult.getListWeather().observe(this, Observer {
 
             textResultado.text = it.coord.lon.toString()
+            textResultLat.text = it.coord.lat.toString()
+            textResultMax.text = it.main.tempMax.toString()
+            textResultMim.text = it.main.tempMin.toString()
+            textRerultCloud.text = it.clouds.all.toString()
+            textResultWind.text = it.wind.speed.toString()
+            textResultVisi.text = it.visibility.toString()
         })
 
         prevResult.getWheatherApi(inputNameCity.text.toString())
