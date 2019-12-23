@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.fragment_search_city.*
 import kotlinx.android.synthetic.main.fragment_search_result.*
 
 class SearchResult : Fragment() {
-    var appRepository = AppRepository()
+ /*   var appRepository = AppRepository()
     lateinit var prevResult : SearchCityViewModel
 
 
@@ -41,5 +41,5 @@ class SearchResult : Fragment() {
         prevResult.getWheatherApi(inputNameCity.text.toString())
 
         // textResult.
-    }
+    }*/
 }

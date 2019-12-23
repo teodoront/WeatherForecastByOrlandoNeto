@@ -14,7 +14,7 @@
         android:layout_height="43dp"
         android:layout_marginTop="204dp"
         android:hint="Enter name city"
-        android:text="Goiania"
+        android:text=""
         app:layout_constraintEnd_toEndOf="@+id/textDescripition"
         app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="@+id/textDescripition"
@@ -117,17 +117,17 @@
         app:layout_constraintGuide_begin="395dp" />
 
     <TextView
-        android:id="@+id/textMax"
+        android:id="@+id/textHum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Max"
-        app:layout_constraintEnd_toStartOf="@+id/textResultMax"
+        android:text="Hum"
+        app:layout_constraintEnd_toStartOf="@+id/textResultHum"
         app:layout_constraintHorizontal_bias="0.224"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <TextView
-        android:id="@+id/textResultMax"
+        android:id="@+id/textResultHum"
         android:layout_width="144dp"
         android:layout_height="26dp"
         android:layout_marginEnd="56dp"
@@ -143,17 +143,17 @@
         app:layout_constraintGuide_begin="431dp" />
 
     <TextView
-        android:id="@+id/textMim"
+        android:id="@+id/textTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Min"
-        app:layout_constraintEnd_toStartOf="@+id/textResultMim"
+        android:text="Temp"
+        app:layout_constraintEnd_toStartOf="@+id/textResultTemp"
         app:layout_constraintHorizontal_bias="0.221"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <TextView
-        android:id="@+id/textResultMim"
+        android:id="@+id/textResultTemp"
         android:layout_width="145dp"
         android:layout_height="22dp"
         android:layout_marginEnd="56dp"

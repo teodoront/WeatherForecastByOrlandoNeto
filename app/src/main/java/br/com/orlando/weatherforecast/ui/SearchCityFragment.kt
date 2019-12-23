@@ -37,8 +37,8 @@ class SearchCityFragment : Fragment() {
 
             textResultado.text = it.coord.lon.toString()
             textResultLat.text = it.coord.lat.toString()
-            textResultMax.text = it.main.tempMax.toString()
-            textResultMim.text = it.main.tempMin.toString()
+            textResultHum.text = it.main.humidity.toString()
+            textResultTemp.text = it.main.temp.toString()
             textRerultCloud.text = it.clouds.all.toString()
             textResultWind.text = it.wind.speed.toString()
             textResultVisi.text = it.visibility.toString()
