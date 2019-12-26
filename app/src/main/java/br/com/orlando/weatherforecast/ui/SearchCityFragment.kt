@@ -16,8 +16,6 @@ import kotlinx.android.synthetic.main.fragment_search_city.view.*
 
 class SearchCityFragment : Fragment() {
 
-
-    var appRepository = AppRepository()
     lateinit var prevResult : SearchCityViewModel
 
 

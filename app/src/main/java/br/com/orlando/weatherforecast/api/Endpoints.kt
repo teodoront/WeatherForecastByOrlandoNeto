@@ -8,8 +8,7 @@ import retrofit2.http.Query
 
 interface Endpoints {
     @GET("weather")
-    fun getWeather(@Query("q") q:String, @Query("appid") appid:String): Call<WeatherResponse>
-
+    fun getWeather(@Query("q") q: String, @Query("appid") appid: String): Call<WeatherResponse>
 
 
 }

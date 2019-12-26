@@ -5,14 +5,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiService {
 
-    private fun getRetrofit() : Retrofit {
+    private fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("http://openweathermap.org/data/2.5/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 
-    fun getEndpoints() : Endpoints {
+    fun getEndpoints(): Endpoints {
         return getRetrofit().create(Endpoints::class.java)
     }
 }

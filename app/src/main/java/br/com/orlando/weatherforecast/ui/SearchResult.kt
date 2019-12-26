@@ -17,31 +17,12 @@ import kotlinx.android.synthetic.main.fragment_search_result.*
 class SearchResult : Fragment() {
 
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_search_result,container,false)
+        return inflater.inflate(R.layout.fragment_search_result, container, false)
     }
-
-
-   /* override fun onResume() {
-        super.onResume()
-
-        prevResult = ViewModelProviders.of(this).get(SearchCityViewModel::class.java)
-        prevResult.getListWeather().observe(this, Observer {
-
-            textResult.text = it.name
-        })
-
-        prevResult.getWheatherApi(inputNameCity.text.toString())
-
-        // textResult.
-    }*/
-
-
 
 }

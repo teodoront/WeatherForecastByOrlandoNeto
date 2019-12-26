@@ -28,7 +28,10 @@ class AppRepository() {
                 response: Response<WeatherResponse>
             ) {
 
-                listWeather.value = response.body()
+                if (response.code() == 200) {
+                    listWeather.value = response.body()
+
+                }
             }
         })
     }
