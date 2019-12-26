@@ -56,6 +56,8 @@ class SearchCityFragment : Fragment() {
         super.onResume()
 
         prevResult = ViewModelProviders.of(this).get(SearchCityViewModel::class.java)
+
+        btnSearch.setOnClickListener{
         prevResult.getListWeather().observe(this, Observer {
 
             textResultado.text = it.coord.lon.toString()
@@ -69,9 +71,7 @@ class SearchCityFragment : Fragment() {
 
         prevResult.getWheatherApi(inputNameCity.text.toString())
 
-        btnSearch.setOnClickListener{
 
-            it.textResultado
         }
     }
 
