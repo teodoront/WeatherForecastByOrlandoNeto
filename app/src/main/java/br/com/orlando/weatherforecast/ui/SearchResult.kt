@@ -15,8 +15,7 @@ import kotlinx.android.synthetic.main.fragment_search_city.*
 import kotlinx.android.synthetic.main.fragment_search_result.*
 
 class SearchResult : Fragment() {
- /*   var appRepository = AppRepository()
-    lateinit var prevResult : SearchCityViewModel
+
 
 
 
@@ -29,7 +28,7 @@ class SearchResult : Fragment() {
     }
 
 
-    override fun onResume() {
+   /* override fun onResume() {
         super.onResume()
 
         prevResult = ViewModelProviders.of(this).get(SearchCityViewModel::class.java)
@@ -42,4 +41,7 @@ class SearchResult : Fragment() {
 
         // textResult.
     }*/
+
+
+
 }
