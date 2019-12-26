@@ -1,5 +1,6 @@
 package br.com.orlando.weatherforecast.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.view.*
 import android.widget.Toolbar
@@ -67,7 +68,7 @@ class SearchCityFragment : Fragment() {
             textResultVisi.text = it.visibility.toString()
         })
 
-        prevResult.getWheatherApi(inputNameCity.text.toString())
+        prevResult.getWheatherApi(inputNameCity.text.toString(), context)
 
 
         }
