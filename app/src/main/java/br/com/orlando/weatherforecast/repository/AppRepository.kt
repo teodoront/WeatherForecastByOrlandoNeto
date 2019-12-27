@@ -34,8 +34,7 @@ class AppRepository() {
                 if (response.code() == 200) {
                     listWeather.value = response.body()
 
-                }
-                else{
+                } else {
                     Toast.makeText(context, "Enter valid name city", Toast.LENGTH_SHORT).show()
                 }
             }

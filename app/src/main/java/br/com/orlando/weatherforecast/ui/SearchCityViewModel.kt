@@ -11,6 +11,7 @@ class SearchCityViewModel(application: Application) : AndroidViewModel(applicati
     private var repository = AppRepository()
 
     fun getListWeather() = repository.listWeather
-    fun getWheatherApi(namecity: String, context: Context?) = repository.getWheather(namecity, context)
+    fun getWheatherApi(namecity: String, context: Context?) =
+        repository.getWheather(namecity, context)
 }
 

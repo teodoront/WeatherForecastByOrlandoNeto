@@ -8,7 +8,6 @@
     android:orientation="vertical">
 
 
-
     <EditText
         android:id="@+id/inputNameCity"
         android:layout_width="318dp"
@@ -78,8 +77,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/muli"
-        android:textStyle="bold"
         android:text="Lat"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textLong"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="@+id/textLong"
@@ -87,9 +86,9 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
-        android:fontFamily="@font/muli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/muli"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="316dp" />
 
@@ -118,8 +117,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/muli"
-        android:textStyle="bold"
         android:text="Hum"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textLat"
         app:layout_constraintStart_toStartOf="@+id/textLat"
         app:layout_constraintTop_toBottomOf="@+id/textLat" />
@@ -167,8 +166,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/muli"
-        android:textStyle="bold"
         android:text="Cloud"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textTemp"
         app:layout_constraintStart_toStartOf="@+id/textTemp"
         app:layout_constraintTop_toBottomOf="@+id/textTemp" />
@@ -191,8 +190,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/muli"
-        android:textStyle="bold"
         android:text="Speed wind"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textCloud"
         app:layout_constraintStart_toStartOf="@+id/textCloud"
         app:layout_constraintTop_toBottomOf="@+id/textCloud" />
@@ -246,9 +245,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/muli"
         android:text="Country"
         android:textStyle="bold"
-        android:fontFamily="@font/muli"
         app:layout_constraintEnd_toEndOf="@+id/textVisibiliti"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textVisibiliti"

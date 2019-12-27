@@ -12,12 +12,18 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import br.com.orlando.weatherforecast.R
 import br.com.orlando.weatherforecast.repository.AppRepository
+import br.com.orlando.weatherforecast.returnApi.Clouds
+import br.com.orlando.weatherforecast.returnApi.Coord
+import br.com.orlando.weatherforecast.returnApi.Main
+import br.com.orlando.weatherforecast.returnApi.WeatherResponse
 import kotlinx.android.synthetic.main.fragment_search_city.*
 import kotlinx.android.synthetic.main.fragment_search_city.view.*
 
+
 class SearchCityFragment : Fragment() {
 
-    lateinit var prevResult : SearchCityViewModel
+
+    lateinit var prevResult: SearchCityViewModel
 
 
     override fun onCreateView(
@@ -26,21 +32,22 @@ class SearchCityFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         setHasOptionsMenu(true)
+
         return inflater.inflate(R.layout.fragment_search_city, container, false)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
 
-           inflater.inflate(R.menu.menu, menu)
+        inflater.inflate(R.menu.menu, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId;
 
-        when(item.itemId){
+        when (item.itemId) {
 
-            R.id.settings_action ->{
+            R.id.settings_action -> {
                 findNavController().navigate(R.id.action_searchCityFragment_to_searchResult)
             }
 
@@ -54,23 +61,41 @@ class SearchCityFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
+
         prevResult = ViewModelProviders.of(this).get(SearchCityViewModel::class.java)
 
-        btnSearch.setOnClickListener{
-        prevResult.getListWeather().observe(this, Observer {
+        btnSearch.setOnClickListener {
+            prevResult.getListWeather().observe(this, Observer {
 
-            textResultado.text = it.coord.lon.toString()
-            textResultLat.text = it.coord.lat.toString()
-            textResultHum.text = it.main.humidity.toString()
-            textResultTemp.text = it.main.temp.toString()
-            textRerultCloud.text = it.clouds.all.toString()
-            textResultWind.text = it.wind.speed.toString()
-            textResultVisi.text = it.visibility.toString()
-            textCountRes.text = it.sys.country
-        })
+                textResultado.text = it.coord.lon.toString()
+                textResultLat.text = it.coord.lat.toString()
+                textResultHum.text = it.main.humidity.toString()
+                textResultTemp.text = it.main.temp.toString()
+                textRerultCloud.text = it.clouds.all.toString()
+                textResultWind.text = it.wind.speed.toString()
+                textResultVisi.text = it.visibility.toString()
+                textCountRes.text = it.sys.country
+            })
 
-        prevResult.getWheatherApi(inputNameCity.text.toString(), context)
+            prevResult.getWheatherApi(inputNameCity.text.toString(), context)
 
+
+        }
+
+        if (inputNameCity != null) {
+            prevResult.getListWeather().observe(this, Observer {
+
+                textResultado.text = it.coord.lon.toString()
+                textResultLat.text = it.coord.lat.toString()
+                textResultHum.text = it.main.humidity.toString()
+                textResultTemp.text = it.main.temp.toString()
+                textRerultCloud.text = it.clouds.all.toString()
+                textResultWind.text = it.wind.speed.toString()
+                textResultVisi.text = it.visibility.toString()
+                textCountRes.text = it.sys.country
+            })
+
+            prevResult.getWheatherApi(inputNameCity.text.toString(), context)
 
         }
     }
