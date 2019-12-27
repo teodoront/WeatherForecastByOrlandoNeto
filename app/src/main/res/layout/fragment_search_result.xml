@@ -7,12 +7,22 @@
 
     <TextView
         android:id="@+id/textResult"
-        android:layout_width="289dp"
-        android:layout_height="471dp"
+        android:layout_width="323dp"
+        android:layout_height="129dp"
         android:gravity="center"
         android:text="@string/current"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/giphy" />
 </androidx.constraintlayout.widget.ConstraintLayout>

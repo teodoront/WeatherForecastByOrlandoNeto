@@ -35,8 +35,8 @@
         android:id="@+id/textResultado"
         android:layout_width="145dp"
         android:layout_height="23dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="44dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
@@ -50,25 +50,25 @@
         android:layout_marginRight="4dp"
         android:fontFamily="@font/muli_black"
         android:gravity="center"
-        android:text="Weather forecast for capital cities"
+        android:text="@string/weather"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/inputNameCity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.698"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.351" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textLong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/muli"
-        android:textStyle="bold"
         android:text="Long"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textResultado"
-        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
@@ -230,6 +230,40 @@
         app:layout_constraintEnd_toEndOf="@+id/textResultWind"
         app:layout_constraintStart_toStartOf="@+id/textResultWind"
         app:layout_constraintTop_toBottomOf="@+id/textResultWind" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="108dp"
+        android:layout_height="121dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_cloud_sun"
+        tools:layout_editor_absoluteY="-8dp" />
+
+    <TextView
+        android:id="@+id/textCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Country"
+        android:textStyle="bold"
+        android:fontFamily="@font/muli"
+        app:layout_constraintEnd_toEndOf="@+id/textVisibiliti"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textVisibiliti"
+        app:layout_constraintTop_toBottomOf="@+id/textVisibiliti" />
+
+    <TextView
+        android:id="@+id/textCountRes"
+        android:layout_width="145dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/textResultVisi"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="@+id/textResultVisi"
+        app:layout_constraintTop_toBottomOf="@+id/textResultVisi" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

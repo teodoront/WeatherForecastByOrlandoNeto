@@ -66,6 +66,7 @@ class SearchCityFragment : Fragment() {
             textRerultCloud.text = it.clouds.all.toString()
             textResultWind.text = it.wind.speed.toString()
             textResultVisi.text = it.visibility.toString()
+            textCountRes.text = it.sys.country
         })
 
         prevResult.getWheatherApi(inputNameCity.text.toString(), context)
